@@ -33,4 +33,26 @@ public class Carro implements IRadio {
         this.saveAMstation = new int [12];
 
     }
+
+    @Override
+    public void tron(){
+        this.turnOn = true;
+    }
+
+    @Override
+    public void troff(){
+        this.turnOn = false;
+    }
+
+    /**
+     * @return  boolean
+     */
+    @Override
+    public boolean on(){
+        if (turnOn){
+            return turnOn;
+        }else {
+            return false;
+        }
+    }
 }
