@@ -3,35 +3,30 @@ public interface IRadio {
 
     public void TurnOff();
 
-    public boolean OnOff();
+    public boolean isOnOff();
 
-    public void setFrequence(String frequency) throws Exception;
-
-    public String getFrequence();
+    public void setFreq(String freq) throws Exception;
+    public String getFreq();
 
     public void Change();
 
     public void Back();
 
-    public int getStationActualAM();
+    public double ActualStationFM();
 
-    public double getStationActualFM();
+    public int ActualStationAM();
 
-    public void setStationActualAM(double ActualStation);
+    public void setFMActualStation(double actualStation);
 
-    void setStationActualAM(int ActualStation);
-
-    public void setStationActualFM(int ActualStation);
-
-    void setStationActualFM(double ActualStation);
+    public void setAMActualStation(int actualStation);
 
     public void saveStationFM(double actualStation, int slot);
 
     public void saveStationAM(int actualStation, int slot);
 
-    public double getFMSlot(int slot);
+    public double getFMButton(int slot);
 
-    public int getAMSlot(int slot);
+    public int getAMButton(int slot);
 
 
 
