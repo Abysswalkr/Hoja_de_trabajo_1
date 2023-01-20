@@ -13,13 +13,13 @@ public interface IRadio {
 
     public void Back();
 
-    public double getStationActualAM();
+    public int getStationActualAM();
 
-    public double getStationActualFM();
+    public int getStationActualFM();
 
-    public double getStationActualAM(double ActualStation);
+    public void getStationActualAM(double ActualStation);
 
-    public double getStationActualFM(int ActualStation);
+    public void getStationActualFM(int ActualStation);
 
     public void saveStationFM(double actualStation, int slot);
 
