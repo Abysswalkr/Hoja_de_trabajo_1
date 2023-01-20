@@ -1,13 +1,19 @@
+/**
+ * This Class, will execute all program menus.
+ * @author: Sergio Palacios, 22808
+ * @version: 19/01/2023
+ */
+
+import java.util.Scanner;
+
 public class Main {
 
-    /*
-     * @author Erick Barrera
-     * @author Sergio Palacios
-     * @author Jose Gramajo
+    public static void main(String[] args) {
+        Carro miradio = new Carro();
 
-     * @date 19- 01 - 2023
-     * Clase principal para poder interactuar con la radio
-     */
+        System.out.println("Menu");
+        // declaramos dos variables scanner
+        Scanner texto = new Scanner(System.in);
+        Scanner numero = new Scanner(System.in);
 
-
-}
+        int opcion = 0;
