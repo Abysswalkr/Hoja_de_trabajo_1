@@ -70,7 +70,6 @@ public class Main {
             }else if(opcion == 3 && miradio.isOnOff()==false){
                 System.out.println("The radio is turned off");
             }
-
             if (opcion == 4 && miradio.isOnOff()== true) {
                 if (miradio.getFreq().equals("AM")) {
                     System.out.println("You are on the AM frequency and the current station is: " + miradio.ActualStationAM());
@@ -80,3 +79,53 @@ public class Main {
             }else if(opcion == 4 && miradio.isOnOff()==false){
                 System.out.println("The radio is turned off");
             }
+            if (opcion == 5 && miradio.isOnOff()==true) {
+                if (miradio.getFreq().equals("AM")) {
+                    System.out.println("Enter the station to save");
+                    int estacion = numero.nextInt();
+                    System.out.println("Enter the space");
+                    int slot = numero.nextInt();
+                    miradio.saveStationAM(estacion, slot);
+                    System.out.println("The space has been successfully saved");
+                }else{
+                    System.out.println("Enter the station to save");
+                    double estacion = numero.nextDouble();
+                    System.out.println("Enter the space");
+                    int slot = numero.nextInt();
+                    miradio.saveStationFM(estacion, slot);
+                    System.out.println("The station has been saved successfully");
+                }
+            }else if(opcion == 5 && miradio.isOnOff()==false){
+                System.out.println("The radio is turned off");
+            }
+
+            if (opcion ==6 && miradio.isOnOff()==true) {
+                System.out.println("Enter the space you want to see");
+                int slot = numero.nextInt();
+                if (miradio.getFreq().equals("AM")) {
+                    System.out.println("The station in space " + slot + " is: "+miradio.getAMButton(slot)+ " AM");
+                }else{
+                    System.out.println("The station in space " + slot + " es: "+miradio.getFMButton(slot)+ " FM");
+                }
+            }else if(opcion == 6 && miradio.isOnOff()==false){
+                System.out.println("The radio is turned off");
+            }
+
+            if (opcion ==7) {
+                System.out.println("1. Turn off the radio");
+                System.out.println("2. Turn on the radio");
+
+                int boton = numero.nextInt();
+                if (boton == 1) {
+                    miradio.TurnOff();
+                    System.out.println("you have turned off the radio");
+                }else{
+                    miradio.TurnOn();
+                    System.out.println("you have turned on the radio");
+                }
+            }
+        }
+        System.out.println(" Exit");
+    }
+
+}
