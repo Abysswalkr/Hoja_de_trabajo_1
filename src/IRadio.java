@@ -15,11 +15,15 @@ public interface IRadio {
 
     public int getStationActualAM();
 
-    public int getStationActualFM();
+    public double getStationActualFM();
 
-    public void getStationActualAM(double ActualStation);
+    public void setStationActualAM(double ActualStation);
 
-    public void getStationActualFM(int ActualStation);
+    void setStationActualAM(int ActualStation);
+
+    public void setStationActualFM(int ActualStation);
+
+    void setStationActualFM(double ActualStation);
 
     public void saveStationFM(double actualStation, int slot);
 

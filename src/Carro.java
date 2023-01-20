@@ -34,12 +34,13 @@ public class Carro implements IRadio {
 
     }
 
+
     /**
      *
      */
     @Override
     public void TurnOn() {
-        this.switchedOn = true;
+
     }
 
     /**
@@ -47,7 +48,7 @@ public class Carro implements IRadio {
      */
     @Override
     public void TurnOff() {
-        this.switchedOn = false;
+
     }
 
     /**
@@ -55,11 +56,7 @@ public class Carro implements IRadio {
      */
     @Override
     public boolean OnOff() {
-        if (switchedOn) {
-            return switchedOn;
-        } else {
-            return false;
-        }
+        return false;
     }
 
     /**
@@ -107,7 +104,7 @@ public class Carro implements IRadio {
      * @return
      */
     @Override
-    public int getStationActualFM() {
+    public double getStationActualFM() {
         return 0;
     }
 
@@ -115,7 +112,7 @@ public class Carro implements IRadio {
      * @param ActualStation
      */
     @Override
-    public void getStationActualAM(double ActualStation) {
+    public void setStationActualAM(double ActualStation) {
 
     }
 
@@ -123,7 +120,23 @@ public class Carro implements IRadio {
      * @param ActualStation
      */
     @Override
-    public void getStationActualFM(int ActualStation) {
+    public void setStationActualAM(int ActualStation) {
+
+    }
+
+    /**
+     * @param ActualStation
+     */
+    @Override
+    public void setStationActualFM(int ActualStation) {
+
+    }
+
+    /**
+     * @param ActualStation
+     */
+    @Override
+    public void setStationActualFM(double ActualStation) {
 
     }
 
@@ -163,3 +176,4 @@ public class Carro implements IRadio {
         return 0;
     }
 }
+
