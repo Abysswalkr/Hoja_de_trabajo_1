@@ -18,5 +18,19 @@ public class Carro implements IRadio {
     private double[] saveFMstation;
     private int[] saveAMstation;
 
+    // metods
 
+    public Carro(){
+        // enciende la radio
+        this.turnOn = true;
+        // frecuencia por defecto al enceder la radio
+        this.frequence = "FM";
+        // estacion por defecto al encender la radio
+        this.FMstation =  87.9;
+
+        // listas de FM y AM para guardar las emisoras
+        this.saveFMstation = new double [12];
+        this.saveAMstation = new int [12];
+
+    }
 }
